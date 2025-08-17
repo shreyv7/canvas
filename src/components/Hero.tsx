@@ -26,11 +26,11 @@ const Hero = () => {
       {/* Content */}
       <div className={`relative z-10 text-center max-w-4xl mx-auto px-6 fade-in ${isVisible ? 'visible' : ''}`}>
         <h1 className="mb-6 text-foreground">
-          Contemporary Art
+          A Journey in art
         </h1>
         
         <p className="text-lg md:text-xl text-muted-foreground font-light tracking-wide mb-12 max-w-2xl mx-auto leading-relaxed">
-          Exploring the beauty of youth through minimalist portraiture and contemporary artistic expression
+         Minimal, raw, spiritual, and modern — a collection of works that reflect both tradition and experimentation.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
