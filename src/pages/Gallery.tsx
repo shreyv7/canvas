@@ -74,7 +74,7 @@ const Gallery = () => {
     },
     {
       id: 9,
-      title: 'Rabdom Shit',
+      title: 'Random Shit',
       image: img9,
       description: 'Bleeding eye',
     },
