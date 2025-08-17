@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Portfolio Design System - Gallery Aesthetic */
+
+@layer base {
+  :root {
+    /* Pure gallery whites and off-whites */
+    --background: 0 0% 99%;
+    --foreground: 0 0% 8%;
+    
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    
+    /* Overlay surfaces */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    
+    /* Gallery primary - sophisticated charcoal */
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Soft gallery gray */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
+    
+    /* Muted gallery tones */
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
+    
+    /* Subtle accent - warm off-white */
+    --accent: 30 20% 96%;
+    --accent-foreground: 0 0% 15%;
+    
+    /* Muted pastel highlights */
+    --pastel-blush: 340 30% 85%;
+    --pastel-sage: 120 20% 85%;
+    --pastel-lavender: 280 25% 85%;
+    
+    /* Interactive states */
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Borders and inputs */
+    --border: 0 0% 90%;
+    --input: 0 0% 94%;
+    --ring: 0 0% 15%;
+    
+    /* Border radius */
+    --radius: 0.25rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  /* Typography hierarchy */
+  h1 {
+    @apply text-4xl md:text-6xl font-extralight tracking-tight;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-4xl font-light tracking-wide;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl font-light;
+  }
+}
+
+@layer components {
+  /* Gallery hover effects */
+  .gallery-item {
+    @apply transition-all duration-500 ease-out overflow-hidden;
+  }
+  
+  .gallery-item:hover {
+    @apply scale-105 shadow-xl;
+  }
+  
+  .gallery-image {
+    @apply transition-transform duration-700 ease-out;
+  }
+  
+  .gallery-item:hover .gallery-image {
+    @apply scale-110;
+  }
+  
+  /* Fade in animations */
+  .fade-in {
+    @apply opacity-0 translate-y-8 transition-all duration-1000 ease-out;
+  }
+  
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Clean focus states */
+  button:focus-visible, 
+  input:focus-visible, 
+  textarea:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+}
